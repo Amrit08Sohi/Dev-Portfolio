@@ -35,6 +35,8 @@ import {
   experience,
   achievements,
 } from "@/data/profile";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 
 const schema = z.object({
@@ -121,72 +123,8 @@ export default function App() {
   };
   return (
     <div className="site-shell">
-      <div className="noise" />
-      <nav
-        className={`nav ${scrolled ? "nav-scrolled" : ""}`}
-        data-testid="main-navigation"
-      >
-        <button
-          className="brand"
-          onClick={() => go("top")}
-          data-testid="brand-home"
-        >
-          <span className="brand-mark">A</span>Amritpal
-          <span className="muted">.dev</span>
-        </button>
-        <div className="nav-links">
-          {navItems.map((n) => (
-            <button
-              key={n.id}
-              onClick={() => go(n.id)}
-              data-testid={`nav-${n.id}`}
-            >
-              {n.label}
-            </button>
-          ))}
-        </div>
-        <div className="nav-actions">
-          <button
-            className="icon-btn"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            data-testid="theme-toggle"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
-          <button
-            className="resume-btn disabled"
-            disabled
-            title="Add public/resume.pdf to enable"
-            data-testid="nav-resume"
-          >
-            Resume <ArrowDown size={14} />
-          </button>
-          <button
-            className="menu-btn"
-            onClick={() => setMenu(!menu)}
-            data-testid="mobile-menu-toggle"
-            aria-expanded={menu}
-            aria-controls="mobile-navigation"
-          >
-            {menu ? <X /> : <Menu />}
-          </button>
-        </div>
-        {menu && (
-          <div className="mobile-menu" id="mobile-navigation">
-            {navItems.map((n) => (
-              <button
-                key={n.id}
-                onClick={() => go(n.id)}
-                data-testid={`mobile-nav-${n.id}`}
-              >
-                {n.label}
-                <ArrowUpRight size={15} />
-              </button>
-            ))}
-          </div>
-        )}
-      </nav>
+      <div className="noise"/>
+      <Navbar/>
       <main id="top">
         <section className="hero wrap" data-testid="hero-section">
           <div className="hero-copy">
@@ -601,24 +539,7 @@ export default function App() {
           </div>
         </section>
       </main>
-      <footer className="footer wrap">
-        <button
-          className="brand"
-          onClick={() => go("top")}
-          data-testid="footer-brand"
-        >
-          <span className="brand-mark">A</span>Amritpal
-          <span className="muted">.dev</span>
-        </button>
-        <span>© 2025 Amritpal Singh. Built with intent.</span>
-        <button
-          className="back-top"
-          onClick={() => go("top")}
-          data-testid="back-to-top"
-        >
-          <ArrowUp size={16} />
-        </button>
-      </footer>
+      <Footer/>
       {selected && (
         <div
           className="modal-backdrop"
