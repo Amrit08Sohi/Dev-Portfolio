@@ -243,7 +243,7 @@ p {
   box-shadow: 0 0 0 4px #9fe87015;
 }
 .hero h1 {
-  font-size: clamp(42px, 5.5vw, 76px);
+  font-size: clamp(42px, 5.5vw, 70px);
   line-height: 1.05;
   letter-spacing: -0.075em;
   margin: 26px 0 25px;
@@ -396,13 +396,16 @@ h2 em {
   animation: marquee 32s linear infinite;
 }
 .tech-marquee span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font: 11px "DM Mono";
   color: var(--muted);
   padding: 19px 35px;
 }
 .tech-marquee b {
   color: var(--accent);
-  margin-left: 28px;
+  margin-left: 20px;
 }
 .section,
 .split-section {
@@ -867,7 +870,7 @@ h2 em {
     height: 350px;
   }
   .hero h1 {
-    font-size: clamp(43px, 11vw, 70px);
+    font-size: clamp(43px, 11vw, 60px);
   }
   .split-section,
   .experience-layout,
