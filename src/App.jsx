@@ -24,8 +24,7 @@ import {
   Terminal,
   X
 } from "lucide-react";
-import LinkedinIcon from "@/components/icons/LinkedInIcon";
-import GithubIcon from "@/components/icons/GithubIcon";
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import "@/App.css";
 import {
   profile,
@@ -37,7 +36,7 @@ import {
 } from "@/data/profile";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import HeroSection from "./components/HeroSection";
 
 const schema = z.object({
   name: z.string().min(2, "Please enter your name"),
@@ -126,125 +125,7 @@ export default function App() {
       <div className="noise"/>
       <Navbar/>
       <main id="top">
-        <section className="hero wrap" data-testid="hero-section">
-          <div className="hero-copy">
-            <motion.div
-              className="eyebrow"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              <span className="pulse" />
-              {profile.availability}
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <span>Turning complex</span>
-              <span>
-                problems into <em>simple</em>
-              </span>
-              <span>software solutions.</span>
-            </motion.h1>
-            <motion.p
-              className="hero-description"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              {profile.heroDescription}
-            </motion.p>
-            <div className="hero-actions">
-              <button
-                className="primary-btn"
-                onClick={() => go("projects")}
-                data-testid="hero-projects-button"
-              >
-                Explore my work <ArrowUpRight size={17} />
-              </button>
-              <button
-                className="ghost-btn disabled"
-                disabled
-                title="Add public/resume.pdf to enable"
-                data-testid="hero-resume-button"
-              >
-                Download resume <ArrowDown size={16} />
-              </button>
-            </div>
-            <div className="social-row">
-              <a href={profile.github} data-testid="hero-github">
-                <GithubIcon/> Github
-              </a>
-              <a href={profile.linkedin} data-testid="hero-linkedin">
-                {/* { <BrowsseL size={16} />   LinkedIn } */}
-                <LinkedinIcon /> LinkedIn
-              </a>
-              <a href={`mailto:${profile.email}`} data-testid="hero-email">
-                <Mail size={16} /> Email
-              </a>
-            </div>
-          </div>
-          <motion.div
-            className="hero-visual"
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.35, duration: 1 }}
-          >
-            <div className="orbit orbit-a" />
-            <div className="orbit orbit-b" />
-            <div className="code-window" data-testid="hero-code-window">
-              <div className="window-bar">
-                <i />
-                <i />
-                <i />
-                <small>amritpal.dev / engineer.ts</small>
-              </div>
-              <div className="code-content">
-                <p>
-                  <b>const</b> engineer = &#123;
-                </p>
-                <p className="indent">
-                  <span>focus:</span> <em>"backend"</em>,
-                </p>
-                <p className="indent">
-                  <span>stack:</span> [<em>"Java"</em>, <em>"React"</em>],
-                </p>
-                <p className="indent">
-                  <span>mindset:</span> <em>"solve well"</em>
-                </p>
-                <p>&#125;;</p>
-                <div className="code-cursor" />
-              </div>
-            </div>
-            <div className="visual-caption">
-              <span>01</span>
-              <span>Systems / interfaces / intent</span>
-            </div>
-          </motion.div>
-        </section>
-        <div className="tech-marquee" data-testid="technology-marquee">
-          <div>
-            {[
-              "Java",
-              "Spring Boot",
-              "React",
-              "TypeScript",
-              "SQL",
-              "Cloud",
-              "Java",
-              "Spring Boot",
-              "React",
-              "TypeScript",
-              "SQL",
-              "Cloud",
-            ].map((t, i) => (
-              <span key={i}>
-                {t} <b>✦</b>
-              </span>
-            ))}
-          </div>
-        </div>
+        <HeroSection/>
         <section
           id="about"
           className="wrap split-section"
@@ -480,11 +361,11 @@ export default function App() {
                   {profile.email}
                 </a>
                 <a href={profile.linkedin} data-testid="contact-linkedin">
-                  {/* <Linkedin size={17} /> */}
+                  <LinkedinIcon size={17} />
                   LinkedIn profile <ExternalLink size={14} />
                 </a>
                 <a href={profile.github} data-testid="contact-github">
-                  {/* <Github size={17} /> */}
+                  <GithubIcon />
                   GitHub profile <ExternalLink size={14} />
                 </a>
               </div>
@@ -581,7 +462,7 @@ export default function App() {
                 href={profile.github}
                 data-testid="modal-github"
               >
-                {/* GitHub profile <Github size={15} /> */}
+                GitHub profile <GithubIcon size={15} />
               </a>
               <a
                 className="primary-btn"

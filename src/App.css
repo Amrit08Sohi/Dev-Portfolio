@@ -396,13 +396,16 @@ h2 em {
   animation: marquee 32s linear infinite;
 }
 .tech-marquee span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font: 11px "DM Mono";
   color: var(--muted);
   padding: 19px 35px;
 }
 .tech-marquee b {
   color: var(--accent);
-  margin-left: 28px;
+  margin-left: 20px;
 }
 .section,
 .split-section {
