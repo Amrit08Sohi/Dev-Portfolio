@@ -22,7 +22,7 @@ import {
   Server,
   Sun,
   Terminal,
-  X
+  X,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import "@/App.css";
@@ -122,8 +122,8 @@ export default function App() {
   };
   return (
     <div className="site-shell">
-      <div className="noise"/>
-      <Navbar/>
+      <div className="noise" />
+      <Navbar />
       <main id="top">
         <HeroSection/>
         <section
@@ -301,7 +301,7 @@ export default function App() {
                     <p>{item.description}</p>
                     <div className="tags">
                       {item.tags.map((t, i) => (
-                        <span key={i+1}>{t}</span>
+                        <span key={i + 1}>{t}</span>
                       ))}
                     </div>
                   </div>
@@ -420,7 +420,7 @@ export default function App() {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer />
       {selected && (
         <div
           className="modal-backdrop"
