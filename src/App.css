@@ -243,7 +243,7 @@ p {
   box-shadow: 0 0 0 4px #9fe87015;
 }
 .hero h1 {
-  font-size: clamp(42px, 5.5vw, 76px);
+  font-size: clamp(42px, 5.5vw, 70px);
   line-height: 1.05;
   letter-spacing: -0.075em;
   margin: 26px 0 25px;
@@ -867,7 +867,7 @@ h2 em {
     height: 350px;
   }
   .hero h1 {
-    font-size: clamp(43px, 11vw, 70px);
+    font-size: clamp(43px, 11vw, 60px);
   }
   .split-section,
   .experience-layout,
