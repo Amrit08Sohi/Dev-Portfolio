@@ -9,7 +9,7 @@ export const profile = {
   github: "https://github.com/Amrit08Sohi",
   linkedin: "https://www.linkedin.com/in/amritpal-singh-a2b201227/",
   heroDescription: "Hi, I'm Amritpal, a Software Engineer focused on backend development and building modern web applications. I enjoy designing REST APIs, working with databases and creating reliable software solutions.",
-  about: "I build dependable systems with a backend-first mindset, then shape the interface around the people using them. My work sits at the intersection of thoughtful APIs, durable data models and focused product experiences.",
+  about: "I’m a System Engineer at TCS who enjoys working across the stack, with a particular interest in backend systems, API design and data-driven applications. My approach is grounded in understanding the problem first, choosing straightforward solutions and writing code that is clear to the next person who works with it. I’m comfortable contributing to frontend work when a product needs it, too.",
 };
 
 
