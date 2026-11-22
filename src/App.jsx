@@ -38,6 +38,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
+import Skills from "./components/Skills";
 const schema = z.object({
   name: z.string().min(2, "Please enter your name"),
   email: z.string().email("Please enter a valid email"),
@@ -127,40 +128,7 @@ export default function App() {
       <main id="top">
         <HeroSection/>
         <About/>
-        <section
-          id="skills"
-          className="wrap section"
-          data-testid="skills-section"
-        >
-          <Reveal>
-            <Heading
-              eyebrow="02 / Capabilities"
-              title="A practical, modern toolkit."
-              copy="A configurable stack for turning ideas into maintainable software."
-            />
-          </Reveal>
-          <div className="skills-grid">
-            {skillGroups.map((group, i) => {
-              const Icon = icons[group.icon];
-              return (
-                <Reveal delay={i * 0.06} key={group.title}>
-                  <article
-                    className="skill-card"
-                    data-testid={`skill-card-${group.title.toLowerCase().replaceAll(" ", "-")}`}
-                  >
-                    <Icon size={22} />
-                    <h3>{group.title}</h3>
-                    <div>
-                      {group.skills.map((s) => (
-                        <span key={s}>{s}</span>
-                      ))}
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-        </section>
+        <Skills/>
         <section
           id="projects"
           className="wrap section"
