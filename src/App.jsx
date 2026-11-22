@@ -37,6 +37,7 @@ import {
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
+import About from "./components/About";
 const schema = z.object({
   name: z.string().min(2, "Please enter your name"),
   email: z.string().email("Please enter a valid email"),
@@ -125,42 +126,7 @@ export default function App() {
       <Navbar />
       <main id="top">
         <HeroSection/>
-        <section
-          id="about"
-          className="wrap split-section"
-          data-testid="about-section"
-        >
-          <Reveal>
-            <Heading
-              eyebrow="01 / About"
-              title="Engineer with a bias for clarity."
-              copy={profile.positioning}
-            />
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="about-copy">
-              <p>{profile.about}</p>
-              <div className="meta-grid">
-                <div>
-                  <small>Primary focus</small>
-                  <strong>Backend development</strong>
-                </div>
-                <div>
-                  <small>Secondary focus</small>
-                  <strong>Full-stack engineering</strong>
-                </div>
-                <div>
-                  <small>Based in</small>
-                  <strong>{profile.location}</strong>
-                </div>
-                <div>
-                  <small>Currently</small>
-                  <strong>Open to opportunities</strong>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </section>
+        <About/>
         <section
           id="skills"
           className="wrap section"
