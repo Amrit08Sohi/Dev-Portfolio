@@ -217,7 +217,7 @@ export default function App() {
             <Heading
               eyebrow="04 / Experience"
               title="A timeline in progress."
-              copy="Keep this section factual — update the data file with verified roles and contributions."
+              // copy="Keep this section factual — update the data file with verified roles and contributions."
             />
           </Reveal>
           <div className="timeline">

@@ -2,7 +2,7 @@ import "@/App.css";
 import Heading from "./Heading";
 import Reveal from "./Reveal";
 import { skillGroups } from "@/data/profile";
-import { Cloud, Code2, Database, Server, Terminal } from "lucide-react";
+import { BrainCircuitIcon, Cloud, Code2, Database, Server, Terminal } from "lucide-react";
 
 
 const Skills = () => {
@@ -12,6 +12,7 @@ const Skills = () => {
     Database,
     "Cloud & DevOps": Cloud,
     Tools: Terminal,
+    "AI & Machine Learning": BrainCircuitIcon
   };
   return (
     <section id="skills" className="wrap section" data-testid="skills-section">
