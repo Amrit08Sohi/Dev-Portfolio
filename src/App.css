@@ -8,7 +8,11 @@
   --muted: #a1a1aa;
   --accent: #8b5cf6;
   --accent2: #6366f1;
-  --green: #9fe870;
+  --green: #70e626;
+  --status-text: #70e626;
+  --status-bg: #9fe87009;
+  --status-border: #314c35;
+  --status-ring: #9fe87015;
   --radius: 16px;
 }
 html[data-theme="light"] {
@@ -18,6 +22,10 @@ html[data-theme="light"] {
   --line: #d8d8e0;
   --text: #17171b;
   --muted: #62626d;
+  --status-text: #397a12;
+  --status-bg: #dee6d9;
+  --status-border: #b7dda4;
+  --status-ring: #58b52622;
 }
 * {
   box-sizing: border-box;
@@ -227,27 +235,33 @@ p {
 }
 .eyebrow {
   display: inline-flex;
-  gap: 8px;
+  gap: 9px;
   align-items: center;
-  border: 1px solid #314c35;
+  width: fit-content;
+  border: 1px solid var(--status-border);
   border-radius: 999px;
-  padding: 8px 11px;
-  color: var(--green);
-  background: #9fe87009;
+  padding: 8px 12px;
+  color: var(--status-text);
+  background: var(--status-bg);
+  box-shadow: 0 4px 16px var(--status-ring);
+  text-shadow: none;
 }
 .pulse {
+  flex: 0 0 auto;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 0 4px #9fe87015;
+  background: var(--status-text);
+  box-shadow: 0 0 0 4px var(--status-ring);
+  animation: blink 1.25s steps(1, end) infinite;
 }
 .hero h1 {
-  font-size: clamp(42px, 5.5vw, 70px);
+  font-size: clamp(42px, 5.5vw, 60px);
   line-height: 1.05;
   letter-spacing: -0.075em;
   margin: 26px 0 25px;
   max-width: 700px;
+  word-spacing: 0.4rem;
 }
 .hero h1 span {
   display: block;
@@ -850,6 +864,12 @@ h2 em {
 @keyframes marquee {
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
   }
 }
 @media (max-width: 850px) {

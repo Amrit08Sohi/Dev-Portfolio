@@ -50,11 +50,9 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <span>Turning complex</span>
-            <span>
-              problems into <em>simple</em>
-            </span>
-            <span>software solutions.</span>
+            <span>Building scalable applications</span>
+            <em>and</em>
+            <span>intelligent AI-powered solutions</span>
           </motion.h1>
           <motion.p
             className="hero-description"
@@ -84,14 +82,14 @@ const HeroSection = () => {
             </a>
           </div>
           <div className="social-row">
-            <a href={profile.github} data-testid="hero-github">
+            <a href={profile.github} target="_blank" data-testid="hero-github">
               <GithubIcon /> Github
             </a>
-            <a href={profile.linkedin} data-testid="hero-linkedin">
+            <a href={profile.linkedin} target="_blank" data-testid="hero-linkedin">
               {/* { <BrowsseL size={16} />   LinkedIn } */}
               <LinkedinIcon /> LinkedIn
             </a>
-            <a href={`mailto:${profile.email}`} data-testid="hero-email">
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`} target="_blank" data-testid="hero-email">
               <Mail size={16} /> Email
             </a>
           </div>
@@ -116,10 +114,10 @@ const HeroSection = () => {
                 <b>const</b> engineer = &#123;
               </p>
               <p className="indent">
-                <span>focus:</span> <em>"backend"</em>,
+                <span>focus:</span> <em>"System Design and AI-Powered Solutions"</em>,
               </p>
               <p className="indent">
-                <span>stack:</span> [<em>"Java"</em>, <em>"React"</em>],
+                <span>stack:</span> [<em>"Spring Boot"</em>, <em>"React"</em>, <em>"Python"</em>],
               </p>
               <p className="indent">
                 <span>mindset:</span> <em>"solve well"</em>
@@ -130,7 +128,7 @@ const HeroSection = () => {
           </div>
           <div className="visual-caption">
             <span>01</span>
-            <span>Systems / interfaces / intent</span>
+            <span>Built with intent</span>
           </div>
         </motion.div>
       </section>

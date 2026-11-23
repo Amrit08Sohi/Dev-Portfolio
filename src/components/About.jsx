@@ -24,19 +24,15 @@ const About = () => {
           <div className="meta-grid">
             <div>
               <small>Primary focus</small>
-              <strong>Backend development</strong>
+              <strong>System Design and AI-Powered Solutions</strong>
             </div>
             <div>
-              <small>Secondary focus</small>
-              <strong>Full-stack engineering</strong>
-            </div>
-            <div>
-              <small>Based in</small>
+              <small>Location</small>
               <strong>{profile.location}</strong>
             </div>
             <div>
               <small>Currently</small>
-              <strong>Open to opportunities</strong>
+              <strong className="text-green-600">Open to opportunities</strong>
             </div>
           </div>
         </div>
