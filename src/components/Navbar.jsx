@@ -71,14 +71,15 @@ const Navbar = () => {
         >
           {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
         </button>
-        <button
-          className="resume-btn disabled"
-          disabled
-          title="Add public/resume.pdf to enable"
+        <a
+          className="resume-btn"
+          href="/Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           data-testid="nav-resume"
         >
           Resume <ArrowDown size={14} />
-        </button>
+        </a>
         <button
           className="menu-btn"
           onClick={() => setMenu(!menu)}
