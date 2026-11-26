@@ -19,8 +19,8 @@ const Skills = () => {
       <Reveal>
         <Heading
           eyebrow="02 / Capabilities"
-          title="A practical, modern toolkit."
-          copy="A configurable stack for turning ideas into maintainable software."
+          title="A focused software toolkit."
+          copy="Core technologies used for application development and delivery."
         />
       </Reveal>
       <div className="skills-grid">

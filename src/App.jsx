@@ -138,8 +138,8 @@ export default function App() {
             <div className="project-intro">
               <Heading
                 eyebrow="03 / Selected work"
-                title="Built for the real world."
-                copy="Placeholder case studies ready for your verified links, screenshots and outcomes."
+                title="Selected project work."
+                copy="A collection of applications built across frontend, backend and cloud."
               />
               <a
                 className="text-link"
@@ -184,7 +184,7 @@ export default function App() {
                   <div className="project-body">
                     <div className="project-top">
                       <span className="project-type">
-                        Case study placeholder
+                        Project
                       </span>
                       <button
                         className="round-btn"
@@ -216,7 +216,7 @@ export default function App() {
           <Reveal>
             <Heading
               eyebrow="04 / Experience"
-              title="A timeline in progress."
+              title="Experience"
               // copy="Keep this section factual — update the data file with verified roles and contributions."
             />
           </Reveal>
@@ -251,8 +251,8 @@ export default function App() {
           <Reveal>
             <Heading
               eyebrow="05 / Achievements"
-              title="Signals of curiosity."
-              copy="Add certifications, competitions and milestones as they become part of your story."
+              title="Recognition and milestones."
+              copy="Academic, competitive and professional achievements."
             />
           </Reveal>
           <div className="achievement-grid">
@@ -374,7 +374,7 @@ export default function App() {
               <X />
             </button>
             <span className="section-eyebrow">
-              {selected.number} / Case study placeholder
+              {selected.number} / Project
             </span>
             <h2>{selected.title}</h2>
             <p>{selected.description}</p>

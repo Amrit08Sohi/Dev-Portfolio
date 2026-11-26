@@ -16,7 +16,7 @@ const Footer = () => {
         <span className="brand-mark">A</span>Amritpal
         <span className="muted">.dev</span>
       </button>
-      <span>© 2025 Amritpal Singh. Built with intent.</span>
+      <span>© 2026 Amritpal Singh.</span>
       <button
         className="back-top"
         onClick={() => go("top")}

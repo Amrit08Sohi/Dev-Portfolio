@@ -50,9 +50,12 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <span>Building scalable applications</span>
+            {/* <span>Building scalable applications</span>
             <em>and</em>
-            <span>intelligent AI-powered solutions</span>
+            <span>intelligent AI-powered solutions</span> */}
+            <span>Hi, I'm </span>
+            <em>Amritpal singh</em>
+            {/* <span>A Full Stack Software Engineer</span> */}
           </motion.h1>
           <motion.p
             className="hero-description"
@@ -81,18 +84,17 @@ const HeroSection = () => {
               Download resume <ArrowDown size={16} />
             </a>
           </div>
-          <div className="social-row">
+          {/* <div className="social-row">
             <a href={profile.github} target="_blank" data-testid="hero-github">
               <GithubIcon /> Github
             </a>
             <a href={profile.linkedin} target="_blank" data-testid="hero-linkedin">
-              {/* { <BrowsseL size={16} />   LinkedIn } */}
               <LinkedinIcon /> LinkedIn
             </a>
             <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`} target="_blank" data-testid="hero-email">
               <Mail size={16} /> Email
             </a>
-          </div>
+          </div> */}
         </div>
         <motion.div
           className="hero-visual"
@@ -119,17 +121,17 @@ const HeroSection = () => {
               <p className="indent">
                 <span>stack:</span> [<em>"Spring Boot"</em>, <em>"React"</em>, <em>"Python"</em>],
               </p>
-              <p className="indent">
+              {/* <p className="indent">
                 <span>mindset:</span> <em>"solve well"</em>
-              </p>
+              </p> */}
               <p>&#125;;</p>
               <div className="code-cursor" />
             </div>
           </div>
-          <div className="visual-caption">
+          {/* <div className="visual-caption">
             <span>01</span>
             <span>Built with intent</span>
-          </div>
+          </div> */}
         </motion.div>
       </section>
       <div className="tech-marquee" data-testid="technology-marquee">

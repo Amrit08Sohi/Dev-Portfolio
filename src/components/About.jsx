@@ -32,7 +32,7 @@ const About = () => {
             </div>
             <div>
               <small>Currently</small>
-              <strong className="text-green-600">Open to opportunities</strong>
+              <strong className="text-green-600">Available For opportunities</strong>
             </div>
           </div>
         </div>
