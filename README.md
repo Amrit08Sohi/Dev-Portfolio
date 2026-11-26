@@ -14,3 +14,9 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Search engine indexing
+
+The sitemap is available at `https://dev-portfolio.amritsoli.online/sitemap.xml`.
+Submit this URL in Google Search Console. The site's `robots.txt` also references
+the sitemap and allows crawling.
