@@ -150,31 +150,8 @@ Create a production build:
 npm run build
 ```
 
-Deploy the contents of the generated `dist/` directory to a static hosting provider. Configure the provider to serve `index.html` for the application entry route.
+## Search engine indexing
 
-## Contributing
-
-Contributions are welcome. For a focused and easy-to-review contribution:
-
-1. Fork the repository.
-2. Create a feature or fix branch:
-
-   ```bash
-   git checkout -b feature/your-change
-   ```
-
-3. Make and test your changes.
-4. Run lint and production build checks:
-
-   ```bash
-   npm run lint
-   npm run build
-   ```
-
-5. Commit the changes and open a pull request with a clear description and screenshots for visual updates.
-
-Please keep profile content factual and preserve responsive and accessible behavior.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+The sitemap is available at `https://dev-portfolio.amritsoli.online/sitemap.xml`.
+Submit this URL in Google Search Console. The site's `robots.txt` also references
+the sitemap and allows crawling.
